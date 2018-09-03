@@ -18,6 +18,7 @@ class ObjectManager :
 {
 private:
 	map<OBJECT_STATE, vector<Object*>*> m_Object;
+	vector<Object*> colliderObjects;
 public:
 	void Init();
 	void ComponentUpdate();
@@ -26,6 +27,10 @@ public:
 	void Release();
 
 	Object *AddObject(OBJECT_STATE state, Object *obj);
+	vector<Object*> *GetObjects(OBJECT_STATE state);
+
+	void SetColliderObjects(Object *obj);
+	vector<Object*> GetColliderObjects();
 
 	ObjectManager();
 	virtual ~ObjectManager();

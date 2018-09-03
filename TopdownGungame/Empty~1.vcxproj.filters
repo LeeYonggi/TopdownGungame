@@ -67,6 +67,12 @@
     <Filter Include="Object\Tile">
       <UniqueIdentifier>{7dddcf36-e448-4be1-8117-1d29cba45332}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Character">
+      <UniqueIdentifier>{5ea2337c-9bbf-4581-ba03-38c36c8e297f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Boxcollider2d">
+      <UniqueIdentifier>{37d6b4bb-6b91-41f4-8a3b-c52026706732}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -145,7 +151,10 @@
       <Filter>Object\Tile</Filter>
     </ClInclude>
     <ClInclude Include="Character.h">
-      <Filter>Object</Filter>
+      <Filter>Object\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Boxcollider2d.h">
+      <Filter>Component\Boxcollider2d</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +219,10 @@
       <Filter>Object\Tile</Filter>
     </ClCompile>
     <ClCompile Include="Character.cpp">
-      <Filter>Object</Filter>
+      <Filter>Object\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Boxcollider2d.cpp">
+      <Filter>Component\Boxcollider2d</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

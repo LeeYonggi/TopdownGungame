@@ -5,7 +5,7 @@
 void MainScene::Init()
 {
 	OBJECTMANAGER->AddObject(OBJ_CAMERA, new Camera01);
-	//OBJECTMANAGER->AddObject(OBJ_CHARACTER, new Character);
+	OBJECTMANAGER->AddObject(OBJ_CHARACTER, new Character);
 	OBJECTMANAGER->AddObject(OBJ_BACKGROUND, new CMaps("test.MSF"));
 }
 

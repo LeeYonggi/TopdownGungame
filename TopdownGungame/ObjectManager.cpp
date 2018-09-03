@@ -78,6 +78,25 @@ Object *ObjectManager::AddObject(OBJECT_STATE state, Object * obj)
 	return obj;
 }
 
+vector<Object*>* ObjectManager::GetObjects(OBJECT_STATE state)
+{
+	auto iter = m_Object.find(state);
+	if (iter == m_Object.end()) return nullptr;
+
+	return iter->second;
+}
+
+void ObjectManager::SetColliderObjects(Object * obj)
+{
+
+	colliderObjects.push_back(obj);
+}
+
+vector<Object*> ObjectManager::GetColliderObjects()
+{
+	return colliderObjects;
+}
+
 ObjectManager::ObjectManager()
 {
 }

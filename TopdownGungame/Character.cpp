@@ -5,11 +5,10 @@
 void Character::Init()
 {
 	AddComponent<TexVertexRenderer>();
-	m_sprite = GetComponent<TexVertexRenderer>();
-	m_sprite->AddanimeImage("test", L"./PNG/horse/%d.png", 1, 8, 150);
-	m_sprite->SetAnimeConfirm(true);
-	transform->position = { 640, 360, 0 };
-	transform->rotation = { 0, 0, 0 };
+	m_TexRenderer = GetComponent<TexVertexRenderer>();
+
+	m_TexRenderer->AddImage("Hitman_gun", L"./PNG/Hitman 1/hitman1_gun.png");
+	
 }
 
 void Character::Update()
