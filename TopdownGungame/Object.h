@@ -1,6 +1,7 @@
 #pragma once
 
 class Component;
+enum COLLIDERTAG;
 class Object
 {
 protected:
@@ -12,6 +13,7 @@ public:
 	virtual void Update()	PURE;
 	virtual void Render()	PURE;
 	virtual void Release()	PURE;
+	virtual void BoxColliderPress2D(COLLIDERTAG collision) { }
 
 	bool GetActive() { return active; }
 	void SetActive(bool _active) { active = _active; }

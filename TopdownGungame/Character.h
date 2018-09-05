@@ -5,6 +5,7 @@ class Character :
 {
 private:
 	TexVertexRenderer *m_TexRenderer;
+	Boxcollider2d *m_BoxCollider;
 	
 
 public:
@@ -12,6 +13,7 @@ public:
 	void Update();
 	void Render();
 	void Release();
+	void BoxColliderPress2D(COLLIDERTAG collision) override;
 
 public:
 

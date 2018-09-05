@@ -2,6 +2,7 @@
 #include "Boxcollider2d.h"
 
 
+
 void Boxcollider2d::Init()
 {
 	OBJECTMANAGER->SetColliderObjects(GetObject_());
@@ -9,14 +10,18 @@ void Boxcollider2d::Init()
 
 void Boxcollider2d::Update()
 {
-	auto iter = OBJECTMANAGER->GetColliderObjects();
-	for (int i = 0; i < iter.size(); i++)
+	if (isControl)
 	{
-		Boxcollider2d *temp2D = iter[i]->GetComponent<Boxcollider2d>();
-		if (iter[i] != this->GetObject_() && temp2D->GetTrigger() == false)
+		auto iter = OBJECTMANAGER->GetColliderObjects();
+		for (int i = 0; i < iter.size(); i++)
 		{
-			D3DXVECTOR2 position = {iter[i]->GetTransform()->position.x, iter[i]->GetTransform()->position.y};
-			IsCollision(position, temp2D->GetSize());
+			Boxcollider2d *temp2D = iter[i]->GetComponent<Boxcollider2d>();
+			if (iter[i] != this->GetObject_() && temp2D->GetTrigger() == false)
+			{
+				D3DXVECTOR2 position = { iter[i]->GetTransform()->position.x, iter[i]->GetTransform()->position.y };
+				if (IsCollision(position, temp2D->GetSize()))
+					GetObject_()->BoxColliderPress2D(temp2D->GetColliderTag());
+			}
 		}
 	}
 }
@@ -48,13 +53,23 @@ bool Boxcollider2d::IsCollision(D3DXVECTOR2 _pos, D3DXVECTOR2 _size)
 	
 	RECT re;
 	if (IntersectRect(&re, &rect, &rect2))
+	{
+		
 		return true;
+	}
 	return false;
+}
+
+D3DXVECTOR2 Boxcollider2d::UnAccessBox(D3DXVECTOR2 _size, RECT re)
+{
+	
+	return D3DXVECTOR2();
 }
 
 Boxcollider2d::Boxcollider2d()
 {
 	istrigger = false;
+	isControl = false;
 	tag = "Boxcollider2d";
 	size.x = 0;
 	size.y = 0;

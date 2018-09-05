@@ -61,6 +61,7 @@ private:
 	map<string, Texture*> m_TextureData;
 	map<string, vector<Texture*>*> m_animeData;
 	vector<NormalTexVertex> _vertex;
+	vector<string> v_WallProcessing;
 
 public:
 	Texture *AddTexture(string str, LPCWSTR route);
@@ -68,6 +69,8 @@ public:
 	vector<Texture*>* AddanimeTexture(string str, LPCWSTR route, int low, int high);
 	vector<Texture*>* GetanimeTexture(string str);
 	vector<NormalTexVertex> GetVertexRect() { return _vertex; }
+	vector<string> GetWallProcessing() { return v_WallProcessing; }
+
 	DataManager();
 	virtual ~DataManager();
 };

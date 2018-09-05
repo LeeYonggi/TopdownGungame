@@ -51,6 +51,7 @@ using namespace std;
 #include "DataManager.h"
 #include "TexVertexRenderer.h"
 #include "cCamera.h"
+#include "Boxcollider2d.h"
 //#include "RenderingManager.h"
 #include "ObjectManager.h"
 #include "SpriteRenderer.h"

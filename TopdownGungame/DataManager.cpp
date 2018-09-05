@@ -59,6 +59,9 @@ DataManager::DataManager()
 	_vertex.push_back(NormalTexVertex(D3DXVECTOR3(-1, -1, 0), D3DXVECTOR3(0, 0, -1), D3DXVECTOR2(0, 1)));
 	_vertex.push_back(NormalTexVertex(D3DXVECTOR3(-1, 1, 0), D3DXVECTOR3(0, 0, -1), D3DXVECTOR2(0, 0)));
 	_vertex.push_back(NormalTexVertex(D3DXVECTOR3(1, 1, 0), D3DXVECTOR3(0, 0, -1), D3DXVECTOR2(1, 0)));
+
+	v_WallProcessing.push_back("tile_100.png");
+	v_WallProcessing.push_back("tile_101.png");
 }
 
 

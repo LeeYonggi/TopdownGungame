@@ -9,6 +9,12 @@ void Character::Init()
 
 	m_TexRenderer->AddImage("Hitman_gun", L"./PNG/Hitman 1/hitman1_gun.png");
 	
+
+	AddComponent<Boxcollider2d>();
+	m_BoxCollider = GetComponent<Boxcollider2d>();
+	m_BoxCollider->SetSize({64, 64});
+	m_BoxCollider->SetControl(true);
+
 }
 
 void Character::Update()
@@ -21,6 +27,11 @@ void Character::Render()
 
 void Character::Release()
 {
+}
+
+void Character::BoxColliderPress2D(COLLIDERTAG collision)
+{
+
 }
 
 Character::Character()

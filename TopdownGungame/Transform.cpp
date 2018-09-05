@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Transform.h"
+#include "Object.h"
 
 
 void Transform::Init()
@@ -29,4 +30,10 @@ void Transform::Render()
 void Transform::Release()
 {
 
+}
+
+void Transform::AddChild(Object * obj)
+{
+	obj->GetTransform()->SetParent(GetObject_()); 
+	childs.push_back(obj); 
 }

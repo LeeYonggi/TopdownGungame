@@ -52,7 +52,8 @@ void CMaps::DataTransform(string str)
 			point.x = point.x * 2 - SCREEN_WIDTH + 64;	
 
 			CTile *tempTile = new CTile(name, temproute, point);
-			OBJECTMANAGER->AddObject(OBJ_BACKGROUND, tempTile);
+			Object *tempObj = OBJECTMANAGER->AddObject(OBJ_BACKGROUND, tempTile);
+			transform->AddChild(tempObj);
 		}
 		stream.close();
 	}

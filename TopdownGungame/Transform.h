@@ -1,7 +1,7 @@
 #pragma once
 #include "Component.h"
 
-
+class Object;
 class Transform :
 	public Component
 {
@@ -25,7 +25,7 @@ public:
 	Transform *GetWorldTransform() { return worldTransform; };
 	void SetParent(Object *obj) { parent = obj; }
 	Object *GetParent() { return parent; }
-	void AddChild(Object *obj) { childs.push_back(obj); }
+	void AddChild(Object *obj);
 	vector<Object*> GetChilds() { return childs; }
 
 public:

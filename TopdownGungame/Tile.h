@@ -7,6 +7,10 @@ private:
 	string tileName;
 	TCHAR route[100];
 	TexVertexRenderer *m_TexRenderer;
+	Boxcollider2d *m_BoxCollider;
+
+public:
+	bool IsWall();
 
 public:
 	void Init();
