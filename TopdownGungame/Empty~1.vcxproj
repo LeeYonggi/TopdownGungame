@@ -151,6 +151,7 @@
     <ClInclude Include="cSceneManager.h" />
     <ClInclude Include="cTime.h" />
     <ClInclude Include="DataManager.h" />
+    <ClInclude Include="Rigidbody.h" />
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MainProc.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="cSceneManager.cpp" />
     <ClCompile Include="cTime.cpp" />
     <ClCompile Include="DataManager.cpp" />
+    <ClCompile Include="Rigidbody.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="MainProc.cpp" />

@@ -73,6 +73,9 @@
     <Filter Include="Component\Boxcollider2d">
       <UniqueIdentifier>{37d6b4bb-6b91-41f4-8a3b-c52026706732}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component\Rigidbody">
+      <UniqueIdentifier>{25ae2593-d46b-43d1-8ae1-c00689f8bf54}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -156,6 +159,9 @@
     <ClInclude Include="Boxcollider2d.h">
       <Filter>Component\Boxcollider2d</Filter>
     </ClInclude>
+    <ClInclude Include="Rigidbody.h">
+      <Filter>Component\Rigidbody</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -223,6 +229,9 @@
     </ClCompile>
     <ClCompile Include="Boxcollider2d.cpp">
       <Filter>Component\Boxcollider2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody.cpp">
+      <Filter>Component\Rigidbody</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

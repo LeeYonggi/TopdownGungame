@@ -15,7 +15,6 @@ private:
 	D3DXVECTOR2 size;
 	bool istrigger;
 	COLLIDERTAG colliderTag;
-	bool isControl;
 	
 public:
 	void SetTrigger(bool set) { istrigger = set; }
@@ -24,7 +23,6 @@ public:
 	void SetSize(D3DXVECTOR2 _pos) { size = _pos; }
 	void SetColliderTag(COLLIDERTAG tag) { colliderTag = tag; }
 	COLLIDERTAG GetColliderTag() { return colliderTag; }
-	void SetControl(bool _isControl) { isControl = _isControl; }
 
 public:
 	void Init();
@@ -32,7 +30,7 @@ public:
 	void Render();
 	void Release();
 	bool IsCollision(D3DXVECTOR2 pos, D3DXVECTOR2 _size);
-	D3DXVECTOR2 UnAccessBox(D3DXVECTOR2 _size, RECT re);
+	D3DXVECTOR2 UnAccessBox(D3DXVECTOR2 _pos, D3DXVECTOR2 _size, RECT re);
 
 	Boxcollider2d();
 	virtual ~Boxcollider2d();

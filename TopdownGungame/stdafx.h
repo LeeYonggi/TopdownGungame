@@ -52,6 +52,7 @@ using namespace std;
 #include "TexVertexRenderer.h"
 #include "cCamera.h"
 #include "Boxcollider2d.h"
+#include "Rigidbody.h"
 //#include "RenderingManager.h"
 #include "ObjectManager.h"
 #include "SpriteRenderer.h"

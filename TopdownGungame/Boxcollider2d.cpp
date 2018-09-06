@@ -10,7 +10,7 @@ void Boxcollider2d::Init()
 
 void Boxcollider2d::Update()
 {
-	if (isControl)
+	if (GetObject_()->GetComponent<Rigidbody>() != nullptr)
 	{
 		auto iter = OBJECTMANAGER->GetColliderObjects();
 		for (int i = 0; i < iter.size(); i++)
@@ -60,9 +60,26 @@ bool Boxcollider2d::IsCollision(D3DXVECTOR2 _pos, D3DXVECTOR2 _size)
 	return false;
 }
 
-D3DXVECTOR2 Boxcollider2d::UnAccessBox(D3DXVECTOR2 _size, RECT re)
+D3DXVECTOR2 Boxcollider2d::UnAccessBox(D3DXVECTOR2 _pos, D3DXVECTOR2 _size, RECT re)
 {
-	
+	D3DXVECTOR2 tempPos = GetObject_()->GetComponent<Rigidbody>()->GetMovePosition();
+	Transform *temp = GetObject_()->GetComponent<Transform>();
+	if (tempPos.x > 0.0f)
+	{
+		temp->position = { re.left - (_size.x / 2), _pos.y , 0 };
+	}
+	if (tempPos.x < 0.0f)
+	{
+		temp->position = { re.right + (_size.x / 2), _pos.y, 0 };
+	}
+	if (tempPos.y > 0.0f)
+	{
+		temp->position = { _pos.x, re.bottom - (_size.y / 2), 0 };
+	}
+	if (tempPos.y < 0.0f)
+	{
+		temp->position = { _pos.x, re.top + (_size.y / 2), 0 };
+	}
 	return D3DXVECTOR2();
 }
 

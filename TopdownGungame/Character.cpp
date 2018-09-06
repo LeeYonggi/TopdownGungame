@@ -13,7 +13,9 @@ void Character::Init()
 	AddComponent<Boxcollider2d>();
 	m_BoxCollider = GetComponent<Boxcollider2d>();
 	m_BoxCollider->SetSize({64, 64});
-	m_BoxCollider->SetControl(true);
+
+	AddComponent<Rigidbody>();
+	m_Rigidbody = GetComponent<Rigidbody>();
 
 }
 
