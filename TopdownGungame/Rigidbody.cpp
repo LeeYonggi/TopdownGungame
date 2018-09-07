@@ -5,6 +5,7 @@
 void Rigidbody::Init()
 {
 	tempPosition = PositionTransform(GetObject_()->GetTransform()->position);
+	movePosition = tempPosition;
 }
 
 void Rigidbody::Update()

@@ -7,6 +7,7 @@ private:
 	TexVertexRenderer *m_TexRenderer;
 	Boxcollider2d *m_BoxCollider;
 	Rigidbody *m_Rigidbody;
+	float speed;
 	
 
 public:

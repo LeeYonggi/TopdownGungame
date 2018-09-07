@@ -17,10 +17,19 @@ void Character::Init()
 	AddComponent<Rigidbody>();
 	m_Rigidbody = GetComponent<Rigidbody>();
 
+	speed = 5;
 }
 
 void Character::Update()
 {
+	if (INPUTMANAGER->IsKeyHold(0x57))
+		transform->position.y += speed;
+	if(INPUTMANAGER->IsKeyHold(0x41))
+		transform->position.x -= speed;
+	if (INPUTMANAGER->IsKeyHold(0x53))
+		transform->position.y -= speed;
+	if (INPUTMANAGER->IsKeyHold(0x44))
+		transform->position.x += speed;
 }
 
 void Character::Render()
