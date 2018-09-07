@@ -18,6 +18,7 @@ void Character::Init()
 	m_Rigidbody = GetComponent<Rigidbody>();
 
 	speed = 5;
+	transform->position.x = -100;
 }
 
 void Character::Update()
