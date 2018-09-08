@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "Character.h"
 
+#define TILE_X_MIN_SIZE 0.0f
+#define TILE_Y_MAX_SIZE -352.0f
+
 
 void Character::Init()
 {
@@ -17,12 +20,24 @@ void Character::Init()
 	AddComponent<Rigidbody>();
 	m_Rigidbody = GetComponent<Rigidbody>();
 
-	speed = 5;
+	speed = 6;
 	transform->position.x = -100;
 }
 
 void Character::Update()
 {
+	if (camera->GetTransform()->GetWorldTransform()->position.y <= TILE_X_MIN_SIZE &&
+		camera->GetTransform()->GetWorldTransform()->position.y >= TILE_Y_MAX_SIZE)
+	{
+		float tempY = transform->position.y;
+		if (tempY > TILE_X_MIN_SIZE)
+			tempY = TILE_X_MIN_SIZE;
+		else if (tempY < TILE_Y_MAX_SIZE)
+			tempY = TILE_Y_MAX_SIZE;
+		camera->GetComponent<cCamera>()->SetViewPostarget({ 0, tempY, MAX_SIZE_DIVISION },
+			{ 0, tempY, 0 });
+	}
+
 	if (INPUTMANAGER->IsKeyHold(0x57))
 		transform->position.y += speed;
 	if(INPUTMANAGER->IsKeyHold(0x41))
@@ -46,10 +61,10 @@ void Character::BoxColliderPress2D(COLLIDERTAG collision)
 
 }
 
-Character::Character()
+Character::Character(Object * _camera)
 {
+	camera = _camera;
 }
-
 
 Character::~Character()
 {

@@ -4,8 +4,8 @@
 
 void MainScene::Init()
 {
-	OBJECTMANAGER->AddObject(OBJ_CAMERA, new Camera01);
-	OBJECTMANAGER->AddObject(OBJ_CHARACTER, new Character);
+	Camera01 *camera = dynamic_cast<Camera01*>(OBJECTMANAGER->AddObject(OBJ_CAMERA, new Camera01));
+	OBJECTMANAGER->AddObject(OBJ_CHARACTER, new Character(camera));
 	OBJECTMANAGER->AddObject(OBJ_BACKGROUND, new CMaps("test.MSF"));
 }
 

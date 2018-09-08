@@ -1,5 +1,7 @@
 #pragma once
 #include "Object.h"
+
+
 class Character :
 	public Object
 {
@@ -8,6 +10,7 @@ private:
 	Boxcollider2d *m_BoxCollider;
 	Rigidbody *m_Rigidbody;
 	float speed;
+	Object *camera;
 	
 
 public:
@@ -19,7 +22,7 @@ public:
 
 public:
 
-	Character();
+	Character(Object *_camera);
 	virtual ~Character();
 };
 

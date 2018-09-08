@@ -1,14 +1,2 @@
-﻿  Boxcollider2d.cpp
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(16): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(44): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(45): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(46): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(47): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(50): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(51): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(52): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(53): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(90): warning C4927: 변환이 잘못되었습니다. 사용자 정의 변환이 암시적으로 두 번 이상 적용되었습니다.
-  h:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(90): note: 'D3DXVECTOR2::D3DXVECTOR2(const FLOAT *)' 생성자를 호출하는 동안
-  c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3dx9math.inl(65): note: 'D3DXVECTOR2::D3DXVECTOR2' 선언을 참조하십시오.
+﻿  Character.cpp
   Empty~1.vcxproj -> H:\Programming\PJ\TopdownGungame\TopdownGungame\Debug\Empty~1.exe

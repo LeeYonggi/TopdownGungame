@@ -64,11 +64,11 @@ using namespace std;
 #include "cSceneManager.h"
 
 //custom
+#include "Character.h"
 #include "Camera01.h"
 #include "Tile.h"
 #include "CMaps.h"
 #include "MapManager.h"
-#include "Character.h"
 
 
 #include "WinMain.h"

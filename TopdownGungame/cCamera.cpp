@@ -35,6 +35,13 @@ void cCamera::Render()
 	SetCam(viewtargetPoint, viewworldUp);
 }
 
+void cCamera::SetViewPostarget(D3DXVECTOR3 pos, D3DXVECTOR3 target)
+{
+	GetObject_()->GetTransform()->GetWorldTransform()->position = pos;
+	GetObject_()->GetTransform()->position = pos;
+	viewtargetPoint = target;
+}
+
 cCamera::cCamera()
 {
 	tag = "Camera";

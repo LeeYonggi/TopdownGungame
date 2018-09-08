@@ -62,6 +62,7 @@ DataManager::DataManager()
 
 	v_WallProcessing.push_back("tile_100.png");
 	v_WallProcessing.push_back("tile_101.png");
+	v_WallProcessing.push_back("tile_154.png");
 }
 
 
