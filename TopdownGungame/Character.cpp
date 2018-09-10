@@ -51,7 +51,6 @@ void Character::Update()
 	D3DXVECTOR2 mousePos = { (float)INPUTMANAGER->GetCusorPosition().x, (float)INPUTMANAGER->GetCusorPosition().y };
 	
 	transform->rotation.z = GetAngle(GetCameraPos(cameraPos, mousePos));
-	cout << GetCameraPos(cameraPos, mousePos).y << endl;
 }
 
 void Character::Render()

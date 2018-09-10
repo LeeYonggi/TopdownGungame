@@ -1,2 +1,58 @@
-﻿  Character.cpp
+﻿  stdafx.cpp
+d:\programming\pj\topdowngungame\topdowngungame\datamanager.h(56): warning C4099: 'Texture': 처음에는 'struct'을(를) 사용하여 형식 이름을 표시했는데 이제는 'class'을(를) 사용하여 표시합니다.
+  d:\programming\pj\topdowngungame\topdowngungame\datamanager.h(5): note: 'Texture' 선언을 참조하십시오.
+d:\programming\pj\topdowngungame\topdowngungame\ctime.h(16): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Boxcollider2d.cpp
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(51): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(52): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(53): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(54): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(57): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(58): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(59): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(60): warning C4244: '=': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(99): warning C4927: 변환이 잘못되었습니다. 사용자 정의 변환이 암시적으로 두 번 이상 적용되었습니다.
+  d:\programming\pj\topdowngungame\topdowngungame\boxcollider2d.cpp(99): note: 'D3DXVECTOR2::D3DXVECTOR2(const FLOAT *)' 생성자를 호출하는 동안
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3dx9math.inl(65): note: 'D3DXVECTOR2::D3DXVECTOR2' 선언을 참조하십시오.
+  Bullet.cpp
+  CMaps.cpp
+d:\programming\pj\topdowngungame\topdowngungame\cmaps.cpp(68): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\programming\pj\topdowngungame\topdowngungame\cmaps.cpp(80): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\cmaps.cpp(92): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\cmaps.cpp(105): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\programming\pj\topdowngungame\topdowngungame\cmaps.cpp(119): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Camera01.cpp
+  Character.cpp
+  Component.cpp
+  DataManager.cpp
+d:\programming\pj\topdowngungame\topdowngungame\datamanager.cpp(39): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 'sprintf' 선언을 참조하십시오.
+  InputManager.cpp
+  MainProc.cpp
+  MainScene.cpp
+  Object.cpp
+  ObjectManager.cpp
+  Rigidbody.cpp
+  SoundManager.cpp
+  SpriteRenderer.cpp
+  TexVertexRenderer.cpp
+d:\programming\pj\topdowngungame\topdowngungame\texvertexrenderer.cpp(50): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TextManager.cpp
+  Tile.cpp
+d:\programming\pj\topdowngungame\topdowngungame\tile.cpp(7): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\programming\pj\topdowngungame\topdowngungame\tile.cpp(43): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\corecrt_wstring.h(123): note: 'wcscpy' 선언을 참조하십시오.
+  Transform.cpp
+  WinMain.cpp
+d:\programming\pj\topdowngungame\topdowngungame\winmain.cpp(180): warning C4244: '초기화 중': 'float'에서 'INT64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\winmain.cpp(181): warning C4244: '초기화 중': 'float'에서 'INT64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\programming\pj\topdowngungame\topdowngungame\winmain.cpp(187): warning C4244: '초기화 중': 'DWORD'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  cCamera.cpp
+  cSceneManager.cpp
+  cTime.cpp
+d:\programming\pj\topdowngungame\topdowngungame\ctime.cpp(19): warning C4244: '=': 'DWORD'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   Empty~1.vcxproj -> D:\Programming\PJ\TopdownGungame\TopdownGungame\Debug\Empty~1.exe

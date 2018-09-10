@@ -76,6 +76,9 @@
     <Filter Include="Component\Rigidbody">
       <UniqueIdentifier>{25ae2593-d46b-43d1-8ae1-c00689f8bf54}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Bullet">
+      <UniqueIdentifier>{2005ff1f-3a0a-4c95-a7fa-c46e87899e7d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -162,6 +165,9 @@
     <ClInclude Include="Rigidbody.h">
       <Filter>Component\Rigidbody</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Object\Bullet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -232,6 +238,9 @@
     </ClCompile>
     <ClCompile Include="Rigidbody.cpp">
       <Filter>Component\Rigidbody</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Object\Bullet</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

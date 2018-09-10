@@ -29,7 +29,7 @@ public:
 	void Update();
 	void Render();
 	void Release();
-	bool IsCollision(D3DXVECTOR2 pos, D3DXVECTOR2 _size);
+	bool IsCollision(D3DXVECTOR2 pos, D3DXVECTOR2 _size, bool objTrigger);
 	D3DXVECTOR2 UnAccessBox(D3DXVECTOR2 _pos, D3DXVECTOR2 _size, RECT re);
 
 	Boxcollider2d();

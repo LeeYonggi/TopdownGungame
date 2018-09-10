@@ -14,6 +14,7 @@ public:
 	virtual void Render()	PURE;
 	virtual void Release()	PURE;
 	virtual void BoxColliderPress2D(COLLIDERTAG collision) { }
+	virtual void TriggerBoxColliderPress2D(COLLIDERTAG collision) { }
 
 	bool GetActive() { return active; }
 	void SetActive(bool _active) { active = _active; }

@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="BaseScene.h" />
     <ClInclude Include="Boxcollider2d.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Camera01.h" />
     <ClInclude Include="cCamera.h" />
     <ClInclude Include="Character.h" />
@@ -171,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Boxcollider2d.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Camera01.cpp" />
     <ClCompile Include="cCamera.cpp" />
     <ClCompile Include="Character.cpp" />

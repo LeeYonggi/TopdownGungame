@@ -1,7 +1,7 @@
 #pragma once
 #include "SingleTon.h"
 
-#define MAX_OBJECT_SIZE 6
+#define MAX_OBJECT_SIZE 7
 
 enum OBJECT_STATE
 {
@@ -9,6 +9,7 @@ enum OBJECT_STATE
 	OBJ_BACK,
 	OBJ_BACKGROUND,
 	OBJ_CHARACTER,
+	OBJ_BULLET,
 	OBJ_EFFECT,
 	OBJ_UI		
 };

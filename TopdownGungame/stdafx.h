@@ -68,6 +68,7 @@ using namespace std;
 
 //custom
 #include "Character.h"
+#include "Bullet.h"
 #include "Camera01.h"
 #include "Tile.h"
 #include "CMaps.h"

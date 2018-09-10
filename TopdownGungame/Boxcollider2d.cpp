@@ -10,18 +10,25 @@ void Boxcollider2d::Init()
 
 void Boxcollider2d::Update()
 {
-	if (GetObject_()->GetComponent<Rigidbody>() != nullptr)
+	Rigidbody * m_RigidBody = GetObject_()->GetComponent<Rigidbody>();
+	if (m_RigidBody != nullptr)
 	{
 		auto iter = OBJECTMANAGER->GetColliderObjects();
 		for (int i = 0; i < iter.size(); i++)
 		{
 			Boxcollider2d *temp2D = iter[i]->GetComponent<Boxcollider2d>();
-			if (iter[i] != this->GetObject_() && temp2D->GetTrigger() == false)
+			if (iter[i] != this->GetObject_())
 			{
 				D3DXVECTOR2 position = { iter[i]->GetTransform()->GetWorldTransform()->position.x,
 					iter[i]->GetTransform()->GetWorldTransform()->position.y };
-				if (IsCollision(position, temp2D->GetSize()))
-					GetObject_()->BoxColliderPress2D(temp2D->GetColliderTag());
+				if (IsCollision(position, temp2D->GetSize(), temp2D->GetTrigger()))
+				{
+					if(istrigger)
+						GetObject_()->TriggerBoxColliderPress2D(temp2D->GetColliderTag());
+					else
+						GetObject_()->BoxColliderPress2D(temp2D->GetColliderTag());
+				}
+				continue;
 			}
 		}
 	}
@@ -36,7 +43,7 @@ void Boxcollider2d::Release()
 {
 }
 
-bool Boxcollider2d::IsCollision(D3DXVECTOR2 _pos, D3DXVECTOR2 _size)
+bool Boxcollider2d::IsCollision(D3DXVECTOR2 _pos, D3DXVECTOR2 _size, bool objTrigger)
 {
 	D3DXVECTOR2 position = GetObject_()->GetTransform()->GetWorldTransform()->position;
 
@@ -55,9 +62,11 @@ bool Boxcollider2d::IsCollision(D3DXVECTOR2 _pos, D3DXVECTOR2 _size)
 	RECT re;
 	if (IntersectRect(&re, &rect, &rect2))
 	{
-		GetObject_()->GetTransform()->position =
-			D3DXVECTOR3(UnAccessBox(position, size, rect2).x, UnAccessBox(position, size, rect2).y, 0);
-		//cout << re.left << " " << re.top << " " << re.right << " " << re.bottom << endl;
+		if (istrigger == false && objTrigger == false)
+		{
+			GetObject_()->GetTransform()->position =
+				D3DXVECTOR3(UnAccessBox(position, size, rect2).x, UnAccessBox(position, size, rect2).y, 0);
+		}
 		return true;
 	}
 	return false;
