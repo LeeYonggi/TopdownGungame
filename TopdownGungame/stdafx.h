@@ -12,6 +12,8 @@
 // Windows 헤더 파일:
 #include <windows.h>
 
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
 // C, C++
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,6 +29,7 @@
 #include <algorithm>
 #include <list>
 #include <atlstr.h>
+#include <Math.h>
 #include<MMSystem.h>
 
 using namespace std;

@@ -1,7 +1,5 @@
 #pragma once
 
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
 const float MAX_SIZE_DIVISION = -SCREEN_HEIGHT;
 
 #define SAFE_DELETE(p) { if(p) delete (p); (p)= nullptr;}

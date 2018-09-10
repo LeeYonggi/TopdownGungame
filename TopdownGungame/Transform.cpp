@@ -19,6 +19,8 @@ void Transform::Update()
 	else
 	{
 		worldTransform->position = position;
+		worldTransform->scale = scale;
+		worldTransform->rotation = rotation;
 	}
 }
 
