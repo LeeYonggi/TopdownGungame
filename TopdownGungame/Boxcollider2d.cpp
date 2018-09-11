@@ -5,7 +5,6 @@
 
 void Boxcollider2d::Init()
 {
-	OBJECTMANAGER->SetColliderObjects(GetObject_());
 }
 
 void Boxcollider2d::Update()
@@ -13,22 +12,25 @@ void Boxcollider2d::Update()
 	Rigidbody * m_RigidBody = GetObject_()->GetComponent<Rigidbody>();
 	if (m_RigidBody != nullptr)
 	{
-		auto iter = OBJECTMANAGER->GetColliderObjects();
-		for (int i = 0; i < iter.size(); i++)
+		for (int state = 0; state < MAX_OBJECT_SIZE; state++)
 		{
-			Boxcollider2d *temp2D = iter[i]->GetComponent<Boxcollider2d>();
-			if (iter[i] != this->GetObject_())
+			auto iter = OBJECTMANAGER->GetObjects(OBJECT_STATE(state));
+			for (int i = 0; i < (*iter).size(); i++)
 			{
-				D3DXVECTOR2 position = { iter[i]->GetTransform()->GetWorldTransform()->position.x,
-					iter[i]->GetTransform()->GetWorldTransform()->position.y };
-				if (IsCollision(position, temp2D->GetSize(), temp2D->GetTrigger()))
+				Boxcollider2d *temp2D = (*iter)[i]->GetComponent<Boxcollider2d>();
+				if ((*iter)[i] != this->GetObject_() && temp2D != nullptr)
 				{
-					if(istrigger)
-						GetObject_()->TriggerBoxColliderPress2D(temp2D->GetColliderTag());
-					else
-						GetObject_()->BoxColliderPress2D(temp2D->GetColliderTag());
+					D3DXVECTOR2 position = { (*iter)[i]->GetTransform()->GetWorldTransform()->position.x,
+						(*iter)[i]->GetTransform()->GetWorldTransform()->position.y };
+					if (IsCollision(position, temp2D->GetSize(), temp2D->GetTrigger()))
+					{
+						if (istrigger)
+							GetObject_()->TriggerBoxColliderPress2D(temp2D->GetColliderTag());
+						else
+							GetObject_()->BoxColliderPress2D(temp2D->GetColliderTag());
+					}
+					continue;
 				}
-				continue;
 			}
 		}
 	}

@@ -16,6 +16,7 @@ void Character::Init()
 	AddComponent<Boxcollider2d>();
 	m_BoxCollider = GetComponent<Boxcollider2d>();
 	m_BoxCollider->SetSize({64, 64});
+	m_BoxCollider->SetColliderTag(COLLIDERTAG::CHARACTER);
 
 	AddComponent<Rigidbody>();
 	m_Rigidbody = GetComponent<Rigidbody>();
@@ -51,6 +52,12 @@ void Character::Update()
 	D3DXVECTOR2 mousePos = { (float)INPUTMANAGER->GetCusorPosition().x, (float)INPUTMANAGER->GetCusorPosition().y };
 	
 	transform->rotation.z = GetAngle(GetCameraPos(cameraPos, mousePos));
+
+	if (INPUTMANAGER->IsKeyDown(VK_LBUTTON))
+	{
+		D3DXVECTOR2 position = transform->position;
+		OBJECTMANAGER->AddObject(OBJ_BULLET, new CBullet(position, GetCameraPos(cameraPos, mousePos), transform->rotation.z));
+	}
 }
 
 void Character::Render()

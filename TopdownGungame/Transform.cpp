@@ -6,6 +6,7 @@
 void Transform::Init()
 {
 	worldTransform = new Transform;
+	*worldTransform = *this;
 }
 
 void Transform::Update()

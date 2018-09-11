@@ -86,17 +86,6 @@ vector<Object*>* ObjectManager::GetObjects(OBJECT_STATE state)
 	return iter->second;
 }
 
-void ObjectManager::SetColliderObjects(Object * obj)
-{
-
-	colliderObjects.push_back(obj);
-}
-
-vector<Object*> ObjectManager::GetColliderObjects()
-{
-	return colliderObjects;
-}
-
 ObjectManager::ObjectManager()
 {
 }
