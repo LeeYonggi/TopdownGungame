@@ -53,6 +53,13 @@ struct Color
 	~Color() { }
 };
 
+enum WALL_PROCESS
+{
+	WALL_FLOOR,
+	WALL_MIRROR
+};
+
+#define WALL_PROCESS_SIZE 2
 class Texture;
 class DataManager :
 	public SingleTon<DataManager>
@@ -61,7 +68,7 @@ private:
 	map<string, Texture*> m_TextureData;
 	map<string, vector<Texture*>*> m_animeData;
 	vector<NormalTexVertex> _vertex;
-	vector<string> v_WallProcessing;
+	map<WALL_PROCESS, vector<string>*> m_WallProcessing;
 
 public:
 	Texture *AddTexture(string str, LPCWSTR route);
@@ -69,7 +76,7 @@ public:
 	vector<Texture*>* AddanimeTexture(string str, LPCWSTR route, int low, int high);
 	vector<Texture*>* GetanimeTexture(string str);
 	vector<NormalTexVertex> GetVertexRect() { return _vertex; }
-	vector<string> GetWallProcessing() { return v_WallProcessing; }
+	vector<string> GetWallProcessing(WALL_PROCESS state);
 
 	DataManager();
 	virtual ~DataManager();

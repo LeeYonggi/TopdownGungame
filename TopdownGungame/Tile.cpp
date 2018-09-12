@@ -4,9 +4,9 @@
 
 bool CTile::IsWall()
 {
-	for (int i = 0; i < DATAMANAGER->GetWallProcessing().size(); i++)
+	for (int i = 0; i < DATAMANAGER->GetWallProcessing(WALL_PROCESS::WALL_FLOOR).size(); i++)
 	{
-		if (DATAMANAGER->GetWallProcessing()[i] == tileName)
+		if (DATAMANAGER->GetWallProcessing(WALL_PROCESS::WALL_FLOOR)[i] == tileName)
 			return false;
 	}
 	return true;
@@ -24,6 +24,11 @@ void CTile::Init()
 		m_BoxCollider = GetComponent<Boxcollider2d>();
 		m_BoxCollider->SetSize({128, 128});
 		m_BoxCollider->SetColliderTag(COLLIDERTAG::WALL);
+		for (int i = 0; i < DATAMANAGER->GetWallProcessing(WALL_PROCESS::WALL_MIRROR).size(); i++)
+		{
+			if (DATAMANAGER->GetWallProcessing(WALL_PROCESS::WALL_MIRROR)[i] == tileName)
+				m_BoxCollider->SetColliderTag(COLLIDERTAG::MIRROR);
+		}
 	}
 }
 

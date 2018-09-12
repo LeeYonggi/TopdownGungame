@@ -8,7 +8,6 @@ private:
 	Boxcollider2d *m_BoxCollider;
 	Rigidbody *m_Rigidbody;
 	D3DXVECTOR2 direction;
-	float speed;
 
 public:
 	void Init();

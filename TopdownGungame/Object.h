@@ -7,6 +7,7 @@ class Object
 protected:
 	bool active;
 	Transform *transform;
+	float speed;
 
 public:
 	virtual void Init()		PURE;
@@ -34,6 +35,7 @@ public:
 	{
 		return D3DXVECTOR2((p1.x * 2.0f) - SCREEN_WIDTH - cameraPos.x, -(p1.y * 2.0f - SCREEN_HEIGHT) + cameraPos.y);
 	}
+	float GetSpeed() { return speed; }
 
 private://component
 	std::map<string, Component*> components;

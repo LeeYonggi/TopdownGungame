@@ -66,15 +66,15 @@ bool Boxcollider2d::IsCollision(D3DXVECTOR2 _pos, D3DXVECTOR2 _size, bool objTri
 	{
 		if (istrigger == false && objTrigger == false)
 		{
-			GetObject_()->GetTransform()->position =
-				D3DXVECTOR3(UnAccessBox(position, size, rect2).x, UnAccessBox(position, size, rect2).y, 0);
+			GetObject_()->GetTransform()->GetWorldTransform()->position = UnAccessBox(position, size, rect2);
+			GetObject_()->GetTransform()->position = UnAccessBox(position, size, rect2);
 		}
 		return true;
 	}
 	return false;
 }
 
-D3DXVECTOR2 Boxcollider2d::UnAccessBox(D3DXVECTOR2 _pos, D3DXVECTOR2 _size, RECT re)
+D3DXVECTOR3 Boxcollider2d::UnAccessBox(D3DXVECTOR2 _pos, D3DXVECTOR2 _size, RECT re)
 {
 	D3DXVECTOR2 tempPos = GetObject_()->GetComponent<Rigidbody>()->GetMovePosition();
 	Transform temp = *GetObject_()->GetComponent<Transform>();

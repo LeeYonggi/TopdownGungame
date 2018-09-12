@@ -7,10 +7,8 @@
 
 void Character::Init()
 {
-	AddComponent<TexVertexRenderer>();
-	m_TexRenderer = GetComponent<TexVertexRenderer>();
-
-	m_TexRenderer->AddImage("Hitman_gun", L"./PNG/Hitman 1/hitman1_gun.png");
+	AddComponent<Rigidbody>();
+	m_Rigidbody = GetComponent<Rigidbody>();
 	
 
 	AddComponent<Boxcollider2d>();
@@ -18,8 +16,10 @@ void Character::Init()
 	m_BoxCollider->SetSize({64, 64});
 	m_BoxCollider->SetColliderTag(COLLIDERTAG::CHARACTER);
 
-	AddComponent<Rigidbody>();
-	m_Rigidbody = GetComponent<Rigidbody>();
+	AddComponent<TexVertexRenderer>();
+	m_TexRenderer = GetComponent<TexVertexRenderer>();
+
+	m_TexRenderer->AddImage("Hitman_gun", L"./PNG/Hitman 1/hitman1_gun.png");
 
 	speed = 6;
 	transform->position.x = -100;
